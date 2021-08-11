@@ -1,0 +1,773 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container
+{
+    display: grid;
+    grid-template-areas: 
+    'navbar'
+    'home'
+    'services'
+    'contact'
+    'footer';
+    grid-gap: 1rem;
+}
+
+.navbar
+{
+    grid-area: navbar;
+    font-family: 'Baloo Chettan 2', cursive;
+    background-color: black;
+    opacity: 0.86;
+    width: 100%;
+    z-index: 100;
+}
+.navbar img{
+    width: 60px;
+    border-radius: 27px;
+    position: relative;
+    top: 4px;
+}
+.navbar span
+{
+    padding: 0px 9px;
+    margin: 0px 3px;
+    font-size: 18px;
+}
+.navbar a
+{
+    text-decoration: none;
+    color: white;
+    transition:all 0.6s;
+}
+.navbar a:hover
+{
+    font-size: 20px;
+    color: red;
+    text-decoration: underline;
+}
+#Home::before
+{
+    background: url("bg1.jpg") no-repeat;
+    background-size: cover;
+    content: "";
+    position: absolute;
+    height: 400px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.8;
+}
+#Home
+{
+    grid-area: home;
+    text-align: center;
+    color: white;
+    margin: 20px 0px;
+    font-family: 'Baloo Chettan 2', cursive;
+}
+.home a
+{
+    text-decoration: none;
+    color:yellow;
+    font-size: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    width: 164px;
+    padding: 0px 15px;
+    text-align: center;
+    font-family: 'Baloo Chettan 2', cursive;
+}
+.home p
+{
+    width: 37rem;
+    text-align: center;
+    padding: 20px 0px;
+    margin: auto;
+    color:black;
+    font-weight: bold;
+}
+#services
+{
+    grid-area: services;
+}
+.catalog
+{
+    text-align: center;
+    margin: 68px 0px;
+}
+.cater h4
+{
+    font-family: 'Baloo Chettan 2', cursive;
+    font-size: 18px;
+    padding: 7px 0px;
+}
+.cater
+{
+    display: inline-block;
+    width: 330px;
+    border: 2px solid red;
+    margin: 22px 53px;
+    text-align: center;
+    height: 420px;
+    border-radius: 43px;
+    background-color: antiquewhite;
+}
+.catalog img
+{
+    width:230px;
+    height: 200px;
+    margin: 13px 50px;
+    border-radius: 117px;
+}
+#img1
+{
+    transition: all 1s;
+}
+#img2
+{
+    transition: all 1s;
+}
+#img3
+{
+    transition: all 1s;
+}
+.catalog img:hover
+{
+    transform:rotateY(360deg) scale(1.5);
+}
+
+#contact
+{
+    grid-area: contact;
+    height: 557px;
+}
+#contact h2
+{
+    text-align: center;
+    font-family: 'Baloo Chettan 2', cursive;
+
+}
+#contact::before
+{
+    background: url("contact.jpg") no-repeat;
+    content: "";
+    background-size: cover;
+    position: absolute;
+    height: 557px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.6;
+}
+.contact_container 
+{
+    padding: 5px 0px;
+    font-family: 'Baloo Chettan 2', cursive;
+    width: 500px;
+    margin: auto;
+}
+.contact_container div
+{
+    padding: 9px 0px;
+    font-family: 'Baloo Chettan 2', cursive;
+}
+.contact_container div input
+{
+    width: 500px;
+    padding: 3px 0px;
+    border-radius: 8px;
+    font-family: 'Baloo Chettan 2', cursive;
+}
+.contact_container div label
+{
+    padding: 0px 3px;
+}
+.contact_container div textarea
+{
+    width: 500px;
+    padding: 3px 0px;
+    border-radius: 8px;
+    font-family: 'Baloo Chettan 2', cursive;
+
+}
+.contact_container div button
+{
+    width: 500px;
+    padding: 5px 0px;
+    border-radius: 8px;
+    font-family: 'Baloo Chettan 2', cursive;
+    background-color: red;
+    cursor:zoom-in;
+    cursor: pointer;
+}
+footer
+{
+    grid-area: footer;
+    background-color: black;
+    color: white;
+    width:100%;
+    margin-top: -16px;
+    text-align: center;
+}
+
+
+
+
+/* ............................ Responsiveness ............................*/
+
+
+@media only screen and (max-width:360px)   /* For Android phones*/
+{
+    body
+    {
+        overflow-x: hidden;
+    }
+    .container
+    {
+        display: grid;
+        grid-template-areas: 
+        'navbar'
+        'home'
+        'services'
+        'contact'
+        'footer';
+        grid-gap: 1rem;
+    }
+    .navbar span
+    {
+        display: block;
+        text-align: center;
+    }
+    .navbar
+    {
+        width: 100vw;
+    }
+    #Home::before
+    {
+        height: 30rem;
+        width:100vw;
+    }
+    .home
+    {
+        width: 100vw;
+        margin: 0rem 0px;
+    }
+    .home p
+    {
+        width: 70vw;
+        text-align: center;
+    }
+    .home h2
+    {
+        width: 70vw;
+        text-align: center;
+        margin: 0px 15vw;
+    }
+    .home p:nth-child(2)
+    {
+        display: none;
+    }
+    .home a
+    {
+        width: 100vw;   
+    }
+
+    .catalog
+    {
+        text-align: center;
+        /* position: relative;
+        top: 0rem; */
+    }
+    .catalog h2
+    {
+        text-align: center;
+        /* margin: 1rem 0px/; */
+        /* position: relative; */
+        /* top: -1.5rem; */
+    }
+    .cater{
+        display: block;
+        width: 70vw;
+        border: 2px solid red;
+        margin: 22px 15vw;
+        text-align: center;
+        /* height: 50vh; */
+    }
+    .cater img
+    {
+        width:40vw;
+        /* object-fit: cover; */
+        margin-left: auto;
+        margin-right: auto;
+        height: 35vw;
+    }
+    .cater p
+    {
+        width:55vw;
+        text-align: center;
+        margin: 0px 1.6em;
+    }
+    #contact::before
+    {
+        width:100vw;
+        object-fit: cover;
+    }
+    .contact_container
+    {
+        width:100vw;
+        text-align: center;
+    }
+    .contact_container div input
+    {
+        width:60vw;
+        margin: 0px 15vw;
+    }
+    .contact_container div textarea
+    {
+        width: 60vw;
+        margin: 0px 15vw;
+    }
+    .contact_container div label
+    {
+        padding: 0px 3px;
+        margin: 0px 15vw;
+    }
+
+    .contact_container div button
+    {
+        width:60vw;
+        margin: 0px 15vw;
+    }
+}
+
+@media only screen and (min-width:360px) and (max-width:540px)  /* For Android phones*/
+{
+    body
+    {
+        overflow-x: hidden;
+    }
+    .container
+    {
+        display: grid;
+        grid-template-areas: 
+        'navbar'
+        'home'
+        'services'
+        'contact'
+        'footer';
+        grid-gap: 1rem;
+    }
+    .navbar span
+    {
+        display: block;
+        text-align: center;
+    }
+    .navbar
+    {
+        width: 100vw;
+    }
+    #Home::before
+    {
+        height: 30rem;
+        width:100vw;
+    }
+    .home
+    {
+        width: 100vw;
+        margin: 0rem 0px;
+    }
+    .home p
+    {
+        width: 70vw;
+        text-align: center;
+    }
+    .home h2
+    {
+        width: 70vw;
+        text-align: center;
+        margin: 0px 15vw;
+    }
+    .home p:nth-child(2)
+    {
+        display: none;
+    }
+    .home a
+    {
+        width: 100vw; 
+    }
+
+    .catalog
+    {
+        text-align: center;
+        /* position: relative;
+        top: 0rem; */
+    }
+    .catalog h2
+    {
+        text-align: center;
+        /* margin: 1rem 0px/; */
+        /* position: relative; */
+        /* top: -1.5rem; */
+    }
+    .cater{
+        display: block;
+        width: 70vw;
+        border: 2px solid red;
+        margin: 22px 15vw;
+        text-align: center;
+    }
+    .cater img
+    {
+        width:50vw;
+        /* object-fit: cover; */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #contact::before
+    {
+        width:100vw;
+        object-fit: cover;
+    }
+    .contact_container
+    {
+        width:100vw;
+        text-align: center;
+    }
+    .contact_container div input
+    {
+        width:60vw;
+        margin: 0px 15vw;
+    }
+    .contact_container div textarea
+    {
+        width: 60vw;
+        margin: 0px 15vw;
+    }
+    .contact_container div label
+    {
+        padding: 0px 3px;
+        margin: 0px 15vw;
+    }
+
+    .contact_container div button
+    {
+        width:60vw;
+        margin: 0px 15vw;
+    }
+}
+@media only screen and (min-width:540px) and (max-width:1023px)   /* For Tablet and landscape mode*/
+{
+    body
+    {
+        overflow-x: hidden;
+    }
+    .container
+    {
+        display: grid;
+        grid-template-areas: 
+        'navbar'
+        'home'
+        'services'
+        'contact'
+        'footer';
+        grid-gap: 1rem;
+    }
+    .navbar
+    {
+        position: fixed;
+
+    }
+    .home
+    {
+        margin: 2rem 0px;
+    }
+    #Home::before
+    {
+        width:100vw;
+        /* object-fit: cover; */
+    }
+    .cater{
+        display: block;
+        width: 70vw;
+        border: 2px solid red;
+        margin: 22px 15vw;
+        text-align: center;
+    }
+    .home p
+    {
+        width: 80vw;
+        text-align: center;
+    }
+    .cater img
+    {
+        /* object-fit: cover; */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .cater p
+    {
+        width:60vw;
+        text-align: center;
+        margin: 0px 2em;
+    }
+    .home p:nth-child(2)
+    {
+        padding: 0vh 7vw;
+    }
+    .home a
+    {
+        position: relative;
+        top: 2rem;
+
+    }
+    .contact_container
+    {
+        width:100vw;
+        /* text-align: center; */
+    }
+    .contact_container div input
+    {
+        width:60vw;
+        margin: 0px 20vw;
+    }
+    .contact_container div textarea
+    {
+        width: 60vw;
+        margin: 0px 20vw;
+    }
+    .contact_container div label
+    {
+        padding: 0px 3px;
+        margin: 0px 20vw;
+    }
+
+    .contact_container div button
+    {
+        width:60vw;
+        margin: 0px 20vw;
+    }
+}
+@media only screen and (min-width:1024px) and (max-width:1200px)
+{
+    body
+    {
+        overflow-x: hidden;
+    }
+    .container
+    {
+        display: grid;
+        grid-template-areas: 
+        'navbar'
+        'home'
+        'services'
+        'contact'
+        'footer';
+        grid-gap: 1rem;
+    }
+    .home
+    {
+        margin: 3rem 0px;
+    }
+    .navbar
+    {
+        position: fixed;
+
+    }
+    #Home::before
+    {
+        width:100vw;
+    }
+    .catalog h2
+    {
+        text-align: center;
+        margin: 4rem 0px;
+        position: relative;
+        top: 2rem;
+    }
+    .cater p
+    {
+        width: 70vw;
+        text-align: center;
+    }
+    .cater{
+        display: block;
+        width: 70vw;
+        border: 2px solid red;
+        margin: 22px 15vw;
+        text-align: center;
+    }
+    .cater img
+    {
+        /* object-fit: cover; */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .home p
+    {
+        width: 80vw;
+        text-align: center;
+    }
+    .home p:nth-child(2)
+    {
+        padding: 0vh 7vw;
+    }
+    .home a
+    {
+        position: relative;
+        top: 2rem;
+    }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1900px)
+{
+    .container
+    {
+        display: grid;
+        grid-template-areas: 
+        'navbar'
+        'home'
+        'services'
+        'contact'
+        'footer';
+        grid-gap: 1rem;
+    }
+    .navbar
+    {
+        position: fixed;
+    }
+    .home
+    {
+        margin: 3rem 0px;
+    }
+    .cater{
+        display: inline-block;
+        width: 20vw;
+        border: 2px solid red;
+        /* margin: 10px 15vw; */
+        text-align: center;
+        padding: 1rem 1rem;
+        /* position: relative; */
+        /* height: 60vh; */
+    }
+    .cater img
+    {
+        width:15vw;
+        margin: 1rem 1vw;
+        border-radius: 10rem;
+        image-rendering:pixelated;
+        position: relative;
+        top:0rem;
+        /* right:2vw; */
+        height: 13vw;
+        /* object-fit: cover; */
+    }
+    .contact_container
+    {
+        width:100vw;
+        /* text-align: center; */
+    }
+    .contact_container div input
+    {
+        width:40vw;
+        margin: 0px 30vw;
+        padding: 0.3vw;
+    }
+    .contact_container div textarea
+    {
+        width: 40vw;
+        margin: 0px 30vw;
+        padding: 0.3vw;
+    }
+    .contact_container div label
+    {
+        padding: 0px 0px;
+        margin: 0px 30vw;
+        padding: 0.3vw;
+    }
+    .contact_container div button
+    {
+        width:40vw;
+        margin: 0px 30vw;
+        padding: 0.3vw;
+    }
+}
+
+@media only screen and (min-width:1900px)
+{
+    .container
+    {
+        display: grid;
+        grid-template-areas: 
+        'navbar'
+        'home'
+        'services'
+        'contact'
+        'footer';
+        grid-gap: 1rem;
+    }
+    .navbar
+    {
+        position: fixed;
+
+    }
+    .home
+    {
+        margin: 3rem 0px;
+    }
+    .cater{
+        display: inline-block;
+        width: 20vw;
+        border: 2px solid red;
+        /* margin: 10px 15vw; */
+        text-align: center;
+        padding: 1rem 1rem;
+        /* position: relative; */
+        height: 60vh;
+    }
+    .cater img
+    {
+        width:15vw;
+        margin: 1rem 1vw;
+        border-radius: 10rem;
+        image-rendering:pixelated;
+        position: relative;
+        top:0rem;
+        right:0rem;
+        height: 13vw;
+        /* object-fit: cover; */
+    }
+    .contact_container
+    {
+        width:100vw;
+        /* text-align: center; */
+    }
+    .contact_container div input
+    {
+        width:40vw;
+        margin: 0px 30vw;
+        padding: 0.3vw;
+    }
+    .contact_container div textarea
+    {
+        width: 40vw;
+        margin: 0px 30vw;
+        padding: 0.3vw;
+    }
+    .contact_container div label
+    {
+        padding: 0px 0px;
+        margin: 0px 30vw;
+        padding: 0.3vw;
+    }
+    .contact_container div button
+    {
+        width:40vw;
+        margin: 0px 30vw;
+        padding: 0.3vw;
+    }
+}
