@@ -295,7 +295,7 @@ footer
         border: 2px solid red;
         margin: 22px 15vw;
         text-align: center;
-        /* height: 50vh; */
+        height: 100vw;
     }
     .cater img
     {
@@ -378,7 +378,7 @@ footer
     .home
     {
         width: 100vw;
-        margin: 0rem 0px;
+        margin:3vw 0px;
     }
     .home p
     {
@@ -484,7 +484,7 @@ footer
     }
     .home
     {
-        margin: 2rem 0px;
+        margin: 3vw 0px;
     }
     #Home::before
     {
@@ -644,7 +644,8 @@ footer
     {
         margin: 3rem 0px;
     }
-    .cater{
+    .cater
+    {
         display: inline-block;
         width: 20vw;
         border: 2px solid red;
@@ -727,7 +728,7 @@ footer
         text-align: center;
         padding: 1rem 1rem;
         /* position: relative; */
-        height: 60vh;
+        height:22vw;
     }
     .cater img
     {
